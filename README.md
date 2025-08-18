@@ -54,4 +54,18 @@ flowchart TD
 
 4. Run the program:
 
+## Chapters
 
+1. [System Configuration](https://github.com/MdMobid/Khatabook-Auto-Reminder-System/blob/main/Chapters/Chapter%201.md)
+2. [Data Persistence Layer
+](https://github.com/MdMobid/Khatabook-Auto-Reminder-System/blob/main/Chapters/Chapter%202.md)
+3. [Email Notification Service
+](https://github.com/MdMobid/Khatabook-Auto-Reminder-System/blob/main/Chapters/Chapter%203.md)
+4. [Core Business Logic
+](https://github.com/MdMobid/Khatabook-Auto-Reminder-System/blob/main/Chapters/Chapter%204.md)
+5. [Automated Reminders & Debt Monitoring
+](https://github.com/MdMobid/Khatabook-Auto-Reminder-System/blob/main/Chapters/Chapter%205.md)
+6. [Command-Line Interface (CLI)
+](https://github.com/MdMobid/Khatabook-Auto-Reminder-System/blob/main/Chapters/Chapter%206.md)
+
+---
