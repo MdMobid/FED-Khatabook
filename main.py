@@ -4,6 +4,9 @@ from db import setup_database
 from scheduler import send_due_reminders
 from config import BACKUP_PATH
 from db import backup_database
+import pandas as pd
+import sqlite3
+from tabulate import tabulate
 
 def print_menu():
     print("\nKhatabook Auto Reminder System")
@@ -93,13 +96,33 @@ def main():
             print("Reminders sent")
 
         elif choice == '7':
+
+            conn = sqlite3.connect("Khatabook.db")
+
+            # USERS TABLE
+            print("\nUSERS TABLE")
+            users_df = pd.read_sql_query("SELECT * FROM users", conn)
+            print(tabulate(users_df, headers='keys', tablefmt='fancy_grid', showindex=False))
+
+            # CREDIT TABLE
+            print("\nCREDIT TABLE")
+            credits_df = pd.read_sql_query("SELECT * FROM credits", conn)
+            print(tabulate(credits_df, headers='keys', tablefmt='fancy_grid', showindex=False))
+
+            # NOTIFICATIONS TABLE
+            print("\nNOTIFICATIONS TABLE")
+            notifications_df = pd.read_sql_query("SELECT * FROM notifications", conn)
+            print(tabulate(notifications_df, headers='keys', tablefmt='fancy_grid', showindex=False))
+
+            conn.close()
+
             from models import NotificationLog
-            print("\nOverdue Accounts:")
+            print("\nOVERDUE ACCOUNTS:")
             overdue_report = NotificationLog.generate_overdue_report()
             for name, email, amount, due_date in overdue_report:
                 print(f"{name} ({email}) - Amount: {amount}, Due Date: {due_date}")
 
-            print("\nBad Debt Accounts:")
+            print("\nBAD DEBT ACCOUNTS:")
             bad_debt_report = NotificationLog.generate_bad_debt_report()
             for name, email, balance in bad_debt_report:
                 print(f"{name} ({email}) - Balance: {balance}")
