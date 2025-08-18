@@ -70,7 +70,7 @@ flowchart TD
 
 ---
 
-# Credits
+## Credits
 
 > Made with 💕 by
 > - [Md Mobid](https://github.com/MdMobid)
