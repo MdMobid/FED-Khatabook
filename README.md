@@ -69,3 +69,12 @@ flowchart TD
 ](https://github.com/MdMobid/Khatabook-Auto-Reminder-System/blob/main/Chapters/Chapter%206.md)
 
 ---
+
+# Credits
+
+> Made with 💕 by
+> - [Md Mobid](https://github.com/MdMobid)
+> - [Inesh Sinha](https://github.com/ineshsinha2006)
+> - [Ayush Kumar](https://github.com/ayushkumarmark)
+
+---
