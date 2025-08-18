@@ -9,7 +9,9 @@ import sqlite3
 from tabulate import tabulate
 
 def print_menu():
-    print("\nKhatabook Auto Reminder System")
+    print("\n" + "-"*40)
+    print("Khatabook Auto Reminder System")
+    print("-"*40)
     print("1. Add User")
     print("2. Update User")
     print("3. Delete User")
